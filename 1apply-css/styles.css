@@ -1,0 +1,13 @@
+   div {
+       color: green;
+       font-family: sans-serif;
+       color: orange
+   }
+
+   strong {
+       color: blue;
+   }
+
+   .highlight{
+    color: red;
+   }
