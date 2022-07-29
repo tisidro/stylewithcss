@@ -3,5 +3,7 @@
 
 ## What I learned and how it applies in my Github page example:
 
-- explanation will go here
+- I learned how to use the HTML style attribute inline, in the <head> and to link to an external CSS document.
+- It is important to inspect the flow of the "CSS cascade" if my code is not working as expected.
+-I can instruct the browser to pay more attention to a style by using higher specificity selectors, but only use the !important when all else fails!
 
