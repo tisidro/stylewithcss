@@ -8,39 +8,42 @@
   </head>
 
   <body>
-
+<div class="main-container">
     <h1><strong>Terri's Example: Applying CSS to HTML With Cascade and Specificity</strong></h1>
-    <div>
+    <p class="main__paragraph">
       My cat Tina is a <strong style="color: orange">pain</strong> when it comes
       to wanting her breakfast first thing in the morning!
-      </div>
-      <div> <strong class="highlight">Finny</strong>, our other cat, will wait
+    </p>
+      <div class="main__paragraph"> <strong class="highlight">Finny</strong>, our other cat, will wait
       patiently without meowing and <strong>scratching</strong> at the door.</div>
      
     
-    <h2>What is demonstrated on this page:</h2>
-    <ul>
-      <li>
+    <h2 class="main__title">What is demonstrated on this page:</h2>
+    <div class="main__list">
+    <ul class="main__ul">
+      <li class="main__li">
         the bold text is red because the "strong" style in the styles.css has a
         red color and I gave it an !important flag. That over-rides everything!
       </li>
 
-      <li>
+      <li class="main__li">
         If you comment out the strong style on line 12 of styles.css, then you
         get green text for the "Finny" text because it takes the "highlight"
         class color of green.
       </li>
 
-      <li>
+      <li class="main__li">
         "Pain" would then be orange because it has an inline style of orange for
         the strong tag.
       </li>
 
-      <li>
+      <li class="main__li">
         "Scratching" will just be blue because it has no class and would take
         the last color assigned to div tags in the styles.css file...which is
         blue!
       </li>
     </ul>
+    </div>
+  </div>
   </body>
 </html>
