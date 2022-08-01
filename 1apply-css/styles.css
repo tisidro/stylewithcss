@@ -1,21 +1,11 @@
-   div {
-       color: purple;
-       font-family: sans-serif;
-       color: blue;
-       padding-bottom: 1em;
-   }
+body {
+    font-family: sans-serif;
+}
 
-   li{
-    color: purple
-   }
+h2 {
+    font-weight: normal;
+}
 
-
-   .highlight{
-    color: green;
-   }
-
-
-/*    
-   strong {
-       color: red !important;
-   } */
+h3 {
+    font-weight: normal;
+}
