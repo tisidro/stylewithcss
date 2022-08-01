@@ -1,13 +1,21 @@
    div {
-       color: green;
+       color: purple;
        font-family: sans-serif;
-       color: orange
+       color: blue;
+       padding-bottom: 1em;
    }
 
-   strong {
-       color: blue;
+   li{
+    color: purple
    }
+
 
    .highlight{
-    color: red;
+    color: green;
    }
+
+
+/*    
+   strong {
+       color: red !important;
+   } */
