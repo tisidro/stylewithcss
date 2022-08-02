@@ -1,0 +1,25 @@
+div {
+    /* create line to visualize div*/
+	border: 1px solid red;
+
+    /* create space within the div */
+    padding: 30px 60px;
+    width: 250px;
+
+    /* for width = 100%, element extends to all of available width + padding and border*/
+    /* width: 100%; */
+
+    /* don't define a height, browsers scroll by default anyway! */
+    /* height: 40px; */
+
+    /* create space outside the div , auto sets right/left so div is centered*/
+    margin: 20px auto 60px;
+
+/* use box-sizing border-box property to modify formulation of box -model */
+/* box-sizing: border-box; */
+}
+
+/* using universal setting to apply box-sizing property to all elements on page */
+* {
+	box-sizing: border-box;
+}
