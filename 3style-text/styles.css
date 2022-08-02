@@ -1,0 +1,92 @@
+/* ---font styles--- */
+
+body {
+  font-family: "Public Sans", Verdana, sans-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
+/* ---font sizes--- */
+
+h1 {
+  font-size: 250%; /* 45px */
+}
+
+h2 {
+  font-size: 200%; /* 36px */
+}
+
+h3 {
+  font-size: 177.78%; /* 32px */
+}
+
+h4 {
+  font-size: 162.5%; /* 26px */
+}
+
+h5 {
+  font-size: 122%; /* 22px */
+}
+
+h6 {
+  font-size: 100%; /* 18px */
+}
+
+h3 {
+  font-weight: 700;
+}
+
+/* ---font weights--- */
+
+strong em,
+em strong {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+}
+
+/* ---font colors--- */
+
+body {
+  font-family: "Public Sans", Verdana, sans-serif;
+  font-size: 18px;
+  color: DarkSlateGray;
+}
+
+h1 {
+  font-size: 250%; /* 45px */
+  color: Indigo;
+}
+
+h2 {
+  font-size: 200%; /* 36px */
+  color: MediumVioletRed;
+}
+
+h3 {
+  font-size: 177.78%; /* 32px */
+  color: LimeGreen;
+}
+
+h4 {
+  font-size: 162.5%; /* 26px */
+  color: Chocolate;
+}
+
+h5 {
+  font-size: 122%; /* 22px */
+  color: Crimson;
+}
+
+h6 {
+  font-size: 100%; /* 18px */
+  color: DeepSkyBlue;
+}
