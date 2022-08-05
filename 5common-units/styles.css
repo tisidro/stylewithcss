@@ -6,12 +6,13 @@ body {
 	margin: 20px auto;
 	padding: 20px;
 	border: 1px solid black;
+	width: 80%;
 	max-width: 480px;
 	box-sizing: border-box;
 }
 
 .title {
-	font-size: 20px;
+	font-size: 125%; /* target size: 20px */
 	margin: 0 0 10px;
 }
 
@@ -20,12 +21,16 @@ body {
 }
 
 .quote-text {
-	font-size: 24px;
+	font-size: 150%; /* target size: 24px */
 	margin: 10px 0;
 }
 
 .large {
-	font-size: 32px;
+	font-size: 133.3%; /* target size: 32px */
+}
+
+.small {
+	font-size: 83.3%; /* target size: 20px */
 }
 
 .citation {
@@ -34,4 +39,12 @@ body {
 	padding-top: 20px;
 	color: #555;
 	font-size: 14px;
+}
+
+.citation {
+	border-top: 1px solid #ccc;
+	margin-top: 20px;
+	padding-top: 20px;
+	color: #555;
+	font-size: 87.5%; /* target size: 14px */
 }
