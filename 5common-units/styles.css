@@ -1,18 +1,24 @@
+/* changes definition of 1rem to specified font size instead of default 16px */
+:root{
+	font-size: 20px;
+}
+
+
 body {
   font-family: "Averia Serif Libre", serif;
 }
 
 .excerpt {
-  margin: 1.25em auto;
-  padding: 1.25em;
-  border: 0.0625em solid black;
-  width: 80%;
-  max-width: 30em;
-  box-sizing: border-box;
+	margin: 1.25rem auto;
+	padding: 1.25rem;
+	border: 0.0625rem solid black;
+	width: 80%;
+	max-width: 30rem;
+	box-sizing: border-box;
 }
 
 .title {
-  font-size: 1.25em; /* target size: 20px */
+  font-size: 1.25rem; /* target size: 20px */
   margin: 0 0 0.5em; /* target size: 10px */
 }
 
@@ -21,22 +27,22 @@ body {
 }
 
 .quote-text {
-	font-size: 1.5em; /* target size: 24px */
-	margin: 0.41667em 0; /* target size: 24px */
+	font-size: 1.5rem;
+	margin: 0.625rem 0;
 }
 
 .large {
-	font-size: 1.333em; /* target size: 32px */
+	font-size: 1.5em;
 }
 
 .small {
-	font-size: 0.8333em; /* target size: 20px */
+	font-size: 0.75em;
 }
 
 .citation {
-  border-top: 1px solid #ccc;
-  margin-top: 20px;
-  padding-top: 20px;
-  color: #555;
-  font-size: 87.5%; /* target size: 14px */
+	border-top: 0.0625rem solid #ccc;
+	margin-top: 1.25rem;
+	padding-top: 1.25rem;
+	color: #555;
+	font-size: 0.875rem;
 }
