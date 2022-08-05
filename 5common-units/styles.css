@@ -1,50 +1,42 @@
 body {
-	font-family: 'Averia Serif Libre', serif;
+  font-family: "Averia Serif Libre", serif;
 }
 
 .excerpt {
-	margin: 20px auto;
-	padding: 20px;
-	border: 1px solid black;
-	width: 80%;
-	max-width: 480px;
-	box-sizing: border-box;
+  margin: 1.25em auto;
+  padding: 1.25em;
+  border: 0.0625em solid black;
+  width: 80%;
+  max-width: 30em;
+  box-sizing: border-box;
 }
 
 .title {
-	font-size: 125%; /* target size: 20px */
-	margin: 0 0 10px;
+  font-size: 1.25em; /* target size: 20px */
+  margin: 0 0 0.5em; /* target size: 10px */
 }
 
 .quote {
-	margin: 0;
+  margin: 0;
 }
 
 .quote-text {
-	font-size: 150%; /* target size: 24px */
-	margin: 10px 0;
+	font-size: 1.5em; /* target size: 24px */
+	margin: 0.41667em 0; /* target size: 24px */
 }
 
 .large {
-	font-size: 133.3%; /* target size: 32px */
+	font-size: 1.333em; /* target size: 32px */
 }
 
 .small {
-	font-size: 83.3%; /* target size: 20px */
+	font-size: 0.8333em; /* target size: 20px */
 }
 
 .citation {
-	border-top: 1px solid #ccc;
-	margin-top: 20px;
-	padding-top: 20px;
-	color: #555;
-	font-size: 14px;
-}
-
-.citation {
-	border-top: 1px solid #ccc;
-	margin-top: 20px;
-	padding-top: 20px;
-	color: #555;
-	font-size: 87.5%; /* target size: 14px */
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding-top: 20px;
+  color: #555;
+  font-size: 87.5%; /* target size: 14px */
 }
