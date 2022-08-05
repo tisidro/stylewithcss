@@ -1,0 +1,48 @@
+/* set distance between baselines (bottom of text) with line-height for better readability */
+body {
+  /* shorthand for -- font-family: "Public Sans", sans-serif; line-height: 1.5; . font-size must be added (1em here)*/
+  font: 1em/1.5 "Public Sans", sans-serif;
+}
+
+/* set smaller line height to improve readability */
+h1,
+h2,
+h3 {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.15;
+}
+
+/* NOTE: It's good to add a comment indicating pixel value rem will return */
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+}
+
+/* set margins on h3 to double top and half bottom margin (based on 24px) for readability */
+/* consider applying aria label="uppercase heading" to avoid screen reader interpreting uppercase as acronym */
+h3 {
+  font-size: 1.5rem; /* 24px */
+  margin: 2em 0 0.5em;
+  text-align: center; /* center text-align for better presentation */
+  text-transform: uppercase;
+  letter-spacing: 0.125em; /* adjust letter spacing to 1/8 of font size for h3 readability */
+}
+
+/* prevent too much white space due to addition of p element default margins */
+h3 + p {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1.25rem; /* 20px */
+}
+
+/* set content to 90% of screen, left and right margin auto to center horizontally on page */
+article {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 70ch; /* set ideal line length to 70 characters for readability */
+}
