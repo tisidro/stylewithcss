@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #444;
+}
+
+/*selecting with class instead of ID*/
+.content-width {
+  margin: 1em auto;
+  width: 90%;
+  max-width: 60ch;
+}
+
+.style-1 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+
+.style-2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.color-1 {
+  color: hsl(300, 70%, 40%);
+}
+
+.color-2 {
+  color: hsl(250, 70%, 40%);
+}
+
+.color-3 {
+  color: hsl(200, 70%, 40%);
+}
+
+/*when class contains both colors, apply a color that is halfway between them*/
+.color-1.color-2 {
+  color: hsl(275, 70%, 40%);/*color between that of 1 and 2*/
+}
+
+.color-2.color-3 {
+  color: hsl(225, 70%, 40%);/*color between that of 2 and 3*/
+}
+
+/*styles any element with the title attribute on page*/
+/*better to specify the abbr element/selector here so only apply to elements w/ title attribute AND abbr selector*/
+abbr[title] {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: hsl(0, 0%, 70%);
+}
+
+/*changes color of URL link to green*/
+/*custom hover state for this url*/
+[href="https://example.com"]:hover {
+  color: hsl(150, 70%, 20%);
+}
+
+/*selects https (secure) links--indicates secure link with lock emoji*/
+[href^="https://"]::before {
+  content: '\1F512';
+}
