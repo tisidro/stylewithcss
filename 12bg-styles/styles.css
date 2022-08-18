@@ -1,0 +1,142 @@
+body {
+  font-family: system-ui, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* sets up flexible grid */
+.grid {
+  width: 90%;
+  max-width: 80rem;
+  margin: 2rem auto;
+  display: grid;
+  /*sets up 3 columns, min width of 100px and max width of 1fr (fraction) of whole width*/
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 1.5rem; /*sets space between rows*/
+}
+
+.item {
+  border: 1px solid #999;
+  background-color: white;
+}
+
+/*background style demo*/
+.preview {
+  height: 16rem;
+  border-bottom: 1px solid #999;
+}
+
+.style-01 {
+  background-color: deeppink;
+}
+
+/*shows image tiling on x and y axes*/
+.style-02 {
+  background-image: url("./images/photo.jpg");
+}
+
+.style-03 {
+  background-image: url("./images/pattern.png");
+}
+
+/*shows image tiling on x axis*/
+.style-04 {
+  background-image: url("./images/pattern-x.png");
+  background-repeat: repeat-x;
+}
+
+/*shows image tiling on y axis*/
+.style-05 {
+  background-image: url("./images/pattern-y.png");
+  background-repeat: repeat-y;
+}
+
+/*just shows the image in upper left corner once*/
+.style-06 {
+  background-image: url("./images/pattern.png");
+  background-repeat: no-repeat;
+}
+
+/*positions single image png in lower right corner*/
+.style-07 {
+  background-image: url("./images/pattern.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+/*positions single image png in center*/
+.style-08 {
+  background-image: url("./images/pattern.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*positions single image png to a set numeric position*/
+.style-09 {
+  background-image: url("./images/pattern.png");
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 40px;
+}
+
+.style-10 {
+  background-image: url("./images/photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /*sizes a background-image--contains it within the element*/
+}
+
+.style-11 {
+  background-image: url("./images/photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /*sizes a background-image will cover the bounds of the element*/
+}
+
+.style-12 {
+  background-image: url("./images/photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30% auto; /*if one value, will apply to both width and height. here 30% width is set and height will set proportionally with auto*/
+}
+
+/*fixes image to browser viewport as opposed to image*/
+.style-13 {
+  background-image: url("./images/pattern.png");
+  background-attachment: fixed;
+}
+
+.style-14 {
+  background: url("./images/pattern.png") center repeat-x gold;
+}
+
+.style-15 {
+  background: url("./images/pattern.png") center / 64px #222;
+}
+
+/*creating a linear gradient*/
+.style-16 {
+  background-image: linear-gradient(to right, deeppink, orange);
+}
+
+/*linear gradient with specified direction and stopping points for colors*/
+.style-17 {
+  background-image: linear-gradient(
+    175deg,
+    navy 0%,
+    dodgerblue 35%,
+    skyblue 50%,
+    gold 50%,
+    orange 51%,
+    saddlebrown 100%
+  );
+}
+
+/* adding more than one background -- use a comma */
+.style-18 {
+  background: url("./images/pattern-y.png") center left / 64px repeat-y,
+    linear-gradient(to top left, dodgerblue 10%, transparent 80%),
+    url("./images/photo.jpg") center / cover no-repeat;
+}
