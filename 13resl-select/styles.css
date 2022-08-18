@@ -1,0 +1,131 @@
+body {
+  font-family: system-ui, sans-serif;
+  color: #333;
+}
+
+.content-width {
+  width: 90%;
+  margin: 2rem auto;
+  max-width: 70ch;
+}
+
+section {
+  margin: 4rem 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: mediumblue;
+}
+
+/* selects only blockquotes found in the .descentant class and applies purple border left and background of lavender*/
+.descendant blockquote {
+  margin: 2rem 0;
+  padding: 1rem 1rem 1rem 2rem;
+  border-left: 0.125rem indigo solid;
+  background-color: lavender;
+}
+
+/* styles font for paragraphs in blockquotes found in .descendant class */
+.descendant blockquote p {
+  font-size: 1.25rem;
+  color: #222;
+}
+
+/* apply style including p elements found in section (a child of .descendant) by specifying .child p  */
+/*add a comma between multiple selectors that share the*/
+/*extend grouping selector with line-height property including <p> elements found in <section> with general-sibling class*/
+.descendant p,
+.child p,
+.general-sibling p,
+.adjacent-sibling p {
+  line-height: 1.5;
+}
+
+/*selects only the <p> element, which is the direct child of the <section class="child"> element*/
+.child > p {
+  color: forestgreen;
+}
+
+/* style subsequent p elements after initial p with lightseagreen */
+.general-sibling p ~ p {
+  color: lightseagreen;
+}
+
+/*you can style different elements this way, they don't both have to be p's!*/
+/*this does the same thing as the previous style because p is subsequent to selector before the ~ */
+.general-sibling div ~ p {
+  color: lightseagreen;
+}
+
+/* applies a solid black top border to a p element after another p element using a  + combinator */
+.adjacent-sibling p + p {
+  border-top: 1px solid black;
+  padding-top: 1em;
+}
+
+/* applies a solid red top border to a p element after a div element using a  + combinator */
+.adjacent-sibling div + p {
+  border-top: 1px solid red;
+  padding-top: 1em;
+}
+
+ul {
+  list-style: none; /*removes bullet styles*/
+  margin: 1rem 0;
+  padding: 0;
+}
+
+/*background colors and borders applied to li children of ul*/
+ul li {
+  padding: 0.5rem 0.75rem;
+  background-color: hsl(120, 50%, 95%);
+  border: 1px solid hsl(120, 50%, 80%);
+}
+
+/*decreases apparent border thickness by removing top overlapping border*/
+ul li + li {
+  border-top: none;
+}
+
+/*selects only the first direct li child of the unordered list to create rounded corners*/
+ul > li:first-child {
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+/*selects only the last li child of the unordered list to create rounded corners*/
+ul > li:last-child {
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+/*creates rounded corners for situations where the list has only one li child element*/
+ul > li:only-child {
+  border-radius: 0.75rem;
+}
+
+ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+ol li {
+  padding: 0.25rem;
+}
+
+/*add color to numbered list using nth-child psuedo-class with odd and even inputs creating a striped effect*/
+ol li:nth-child(even) {
+  background-color: aliceblue;
+}
+
+ol li:nth-child(odd) {
+  background-color: lavenderblush;
+}
+
+/*add color to numbered list using nth-child psuedo-class, with numeric input creating a highlight effect*/
+ol li:nth-child(4) {
+  color: white;
+  background-color: indigo;
+}
