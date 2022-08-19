@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: hsl(215, 5%, 20%);
+  background-color: hsl(215, 5%, 98%);
+}
+
+.content-width {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.content-width {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+/*remove underline from link, deepen color*/
+a {
+  color: hsl(215, 80%, 50%);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.button {
+  /* display: block; */
+  display: inline-block; /*does not take up entire width of parent container*/
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: hsl(215, 20%, 95%);
+  background: linear-gradient(
+    to bottom,
+    hsl(215, 80%, 60%),
+    hsl(215, 80%, 40%)
+  );
+  border-radius: 0.25rem;
+  border: 1px solid hsl(215, 80%, 35%);
+  text-shadow: 0 -1px hsl(215, 80%, 35%);
+  box-shadow: 0 1px hsl(215, 80%, 70%) inset;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+caption {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(215, 25%, 25%);
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+tr {
+  text-align: center;
+}
+
+thead > tr {
+  color: hsl(215, 25%, 100%);
+  background-color: hsl(215, 80%, 20%);
+}
+
+tbody > tr:nth-child(even) {
+  background-color: hsl(215, 50%, 93%);
+}
+
+tbody th {
+  font-size: 1.125rem;
+}
+
+td,
+th {
+  padding: 0.5rem;
+}
+
+.label {
+  display: none;
+}
+
+/*setting display to block stacks table contents one on top of the other which is GOOD FOR SMALL SCREENS*/
+/*this is for the tutorial only, usually you would do min-width for queries and follow a mobile-first approach!*/
+@media (max-width: 60rem) {
+  table,
+  caption,
+  /* thead, */
+  tbody,
+  tr,
+  th, /*table header cell*/
+  td {
+    /*table data cell*/
+    display: block;
+    text-align: left;
+  }
+
+  thead {
+    display: none;
+  }
+
+  /*removes light blue striping effect on even rows set earlier*/
+  tbody > tr:nth-child(even) {
+    background-color: transparent;
+  }
+
+  /*button will fill container--opposite of display:inline*/
+  table .button {
+    display: block;
+  }
+
+  /*give label some styles to create a "heading" feel for small screen*/
+  .label {
+    display: inline;
+    font-weight: 700;
+  }
+
+  /*gives all table headers that descend from tbody a dark color to define them*/
+  tbody th {
+    color: hsl(215, 25%, 100%);
+    background-color: hsl(215, 80%, 20%);
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  /*define data sets (like Mercury, Venus, etc) with border by selecting table rows with parent of tbody and applying border all around*/
+  tbody > tr {
+    border: 1px solid hsl(215, 80%, 20%);
+    border-radius: 0.5rem;
+  }
+
+  /*add some space to table body groupings with adjacent sibling combinator for tr*/
+  tbody > tr + tr {
+    margin-top: 1rem;
+  }
+
+  /*going for the striped effect by giving even td (data cells) a different color!*/
+  td:nth-child(even) {
+    background-color: hsl(215, 50%, 93%);
+  }
+}
