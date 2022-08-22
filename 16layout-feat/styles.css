@@ -1,0 +1,143 @@
+/*--CSS variables--*/
+:root {
+  --z-1: 100; /*--z-1 is bottom layer of our z-index system*/
+  --z-2: 200;
+  --z-3: 300;
+  --z-4: 400;
+  --z-5: 500;
+  --z-6: 600;
+  --z-7: 700;
+  --z-8: 800;
+  --z-9: 900;
+}
+
+body {
+  margin: 0;
+  font: 1rem / 1.5 sans-serif;
+}
+
+main {
+  margin: 6rem auto;
+  width: 95%;
+  max-width: 75ch;
+  font-size: 1.125rem;
+}
+
+/*---styles for navigation bar---*/
+header {
+  position: fixed; /*fixes navigation to stay in viewport no matter where user scrolls on page*/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(
+    --z-9
+  ); /*puts header at top value of z-index system so it is above all other position elements*/
+  font: 1.125rem / 1.25 MuseoModerno, sans-serif;
+  /*puts contents in horizontal row, centered to each other*/
+  /*makes h1 and nav go to opposite ends of container*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: white;
+  background: linear-gradient(250deg, hsl(300, 40%, 10%), hsl(300, 40%, 20%));
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*puts top-level nav items in flex row of their own*/
+.nav-main {
+  display: flex;
+  align-items: stretch;
+}
+
+.item-top {
+  position: relative;
+}
+
+/*hide sub-nav links when not hovered over*/
+.nav-sub {
+  display: none;
+}
+
+/*styling links*/
+.link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.link-top {
+  padding: 1.25rem 1.5rem;
+}
+
+.link-sub {
+  padding: 0.75rem 1.5rem;
+}
+
+/*adds bkgrd color to link when parent li is hovered/has focus and when descendent has focus*/
+.item-top:hover .link-top,
+.item-top:focus .link-top,
+.item-top:focus-within .link-top {
+  background-color: black;
+}
+
+.link-sub:hover,
+.link-sub:focus {
+  background-color: hsl(210, 40%, 20%);
+}
+
+/*styling drop-down effect*/
+.item-top:hover .nav-sub,
+.item-top:focus .nav-sub,
+.item-top:focus-within .nav-sub {
+  display: block; /*when li is hovered/focused display block  makes it visible!*/
+  position: absolute; /*sets up more precise positioning control (to follow)*/
+  top: 100%; /*moves property so top starts at relative ancestor's bottom*/
+  right: 0; /*so width of the dropdown doesn't go offscreen*/
+  width: 15rem;
+  background-color: black;
+}
+
+figure {
+  margin: 2rem 0;
+  padding: 0;
+  position: relative; /*gives context to figcaption child element for good positioning*/
+  z-index: var(--z-1); /*puts figure at bottom layer of z-index system*/
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h2 {
+  font: 400 1.875rem/1.25 MuseoModerno, sans-serif;
+  color: hsl(300, 40%, 30%);
+}
+
+/* selector sets up the image as an inline-block to make it only as wide as its content */
+figcaption {
+  position: absolute; /*moves figcaption to bottom right corner of page*/
+  right: 0;
+  bottom: 1rem;
+  display: inline-block;
+  color: white;
+  background-color: hsl(210, 40%, 10%);
+  padding: 0.25rem 1rem;
+}
+
+/*descendant selector sets the color value to inherit so that it uses its parent’s white text*/
+figcaption a {
+  color: inherit;
+}
