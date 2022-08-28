@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font: 100%/1.5 sans-serif;
+}
+
+main {
+  margin: 6rem auto;
+  width: 75ch;
+  font-size: 1.125rem;
+}
+
+h2 {
+  font: 400 1.875rem/1.25 MuseoModerno, sans-serif;
+  color: #6b2d6b;
+}
+
+.site-header {
+  font: 1.125rem / 1.25 MuseoModerno, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: white;
+  background: linear-gradient(135deg, #8e3d8e, #230f23);
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+}
+
+.nav-link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+  padding: 1.25rem 1.5rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #230f23;
+  background-color: white;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  color: white;
+  background: #4c90b2;
+  border: 1px solid #2d566b;
+  border-radius: 0.5rem;
+  background-image: /*gradient will appear to animate using transition below*/ linear-gradient(
+    to bottom,
+    hsla(200, 40%, 80%, 0.4),
+    transparent,
+    hsla(200, 40%, 20%, 0.6)
+  );
+  transition: background-color 250ms ease; /*transition animation switches button color*/
+}
+
+.button:hover,
+.button:focus {
+  background-color: #2d566b;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.75
+  ); /*alpha channel color values--create transparency behind modal so user can see main content behind it*/
+  display: flex; /*works with margin: auto on .modal selector to center content vertically/horizonally to page*/
+  opacity: 0; /*hides modal until instantiated*/
+  pointer-events: none; /*element becomes invisible not only to sighted users w/mouse, but to pointer-based input devices as well*/
+  transition: opacity 250ms ease; /*cause the modal to fade in and out of view*/
+  /*transition property-- transition time --how to transition. ease starts slow, speeds up , slows again*/
+}
+
+/*allows modal to be visible when called--:target is instantiated when an element has a URL focus (see HTML)*/
+.modal-container:target {
+  opacity: 1;
+  pointer-events: all; /*reinstates the interaction, but only when the .modal-container is specified in the URL to be active and visible.*/
+}
+
+.modal {
+  margin: auto;
+  width: 90%;
+  max-width: 40rem;
+  background: linear-gradient(135deg, hsl(300, 40%, 20%), hsl(300, 40%, 5%));
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem #000a; /*creates drop shadow on modal, alpha channel softens it with some transparency*/
+}
+
+.modal-header,
+.modal-content {
+  padding: 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsla(300, 80%, 90%, 0.2);
+  border-radius: 1.5rem 1.5rem 0 0;
+  border: 4px solid #f7baf72f; /*adding 2f alpha channel to #f7baf7 hex color gives it more opacity--00 would be fully transparent*/
+  border-bottom: none;
+}
+
+.modal-title {
+  margin: 0;
+  color: white;
+}
+
+.modal-close {
+  color: transparent;
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  overflow: hidden;
+  /*creates an "X" shape with linear gradients*/
+  background-image: linear-gradient(
+      /* to right and to top make two gradients on 45 degree angles that overlap*/
+        to top right,
+      /*there will be no gradation since both transparent and white are the same -- it will just flip from transparent to white %*/
+        transparent 48%,
+      white 48%,
+      white 52%,
+      transparent 52%
+    ),
+    linear-gradient(
+      to top left,
+      transparent 48%,
+      white 48%,
+      white 52%,
+      transparent 52%
+    );
+}
+
+/*makes X more noticeable when user interacts with it*/
+.modal-close:hover,
+.modal-close:focus {
+  background-image: linear-gradient(
+      to top right,
+      transparent 46%,
+      white 46%,
+      white 54%,
+      transparent 54%
+    ),
+    linear-gradient(
+      to top left,
+      transparent 46%,
+      white 46%,
+      white 54%,
+      transparent 54%
+    );
+}
+
+.modal-content {
+  color: white;
+  border-radius: 0 0 1.5rem 1.5rem;
+  border: 4px solid #f7baf744; /*adding 44 alpha channel to #f7baf7 hex color gives it more opacity--00 would be fully transparent*/
+  border-top: none;
+}
